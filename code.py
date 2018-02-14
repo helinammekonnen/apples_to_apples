@@ -17,7 +17,7 @@ def judge(shuffled_cards, original_cards, scores):
     winner = [str(shuffled_cards.see_card(choice - 1)),
               str(original_cards.find_card_index(shuffled_cards.see_card(choice - 1)))]
     print("The winning card is " + winner[0] + ", so Player #" + winner[1] + " wins the round!")
-    scores[int(winner[1]) - 1] += 1 #choice is equivalent to user number to incrementing by that index (should) work
+    scores[int(winner[1]) - 1] += 1  #choice is equivalent to user number to incrementing by that index (should) work
 
 
 def is_game_over(quit_condition, point, limit):
@@ -37,9 +37,9 @@ def run_game():
         print("Oops, that wasn't a valid input! Please enter a number with no decimals.")
         num_users = int(input("Number of players (enter 0 to quit): "))  # get number of players
     print()
-    list_of_decks = [] # will make this a list of each player's hand. is a list of Decks
+    list_of_decks = []  # will make this a list of each player's hand. is a list of Decks
     cards_for_play = Deck([])
-    scores = [0] * num_users #set list to length of number of users
+    scores = [0] * num_users  # set list to length of number of users
     prompt_card_deck_green = Deck([])
 
     for card in green_cards:
