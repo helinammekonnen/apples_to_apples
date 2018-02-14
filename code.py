@@ -6,6 +6,7 @@ def clear_console():
     for i in range(30):
         print()
 
+        
 def judge(shuffled_cards, original_cards, scores):
     print("Your options are the following cards:")
     shuffled_cards.print_deck()
@@ -114,7 +115,7 @@ class Deck(object):
     def print_deck(self):
         count = 1
         for e in self.constituent_cards:
-            print("Card #" + str(count) + ": "+ str(e))
+            print("Card #" + str(count) + ": " + str(e))
             count += 1
 
     def add_card(self, card):
@@ -138,6 +139,7 @@ class Deck(object):
     def find_card_index(self, card):
         return self.constituent_cards.index(card)
 
+    
 class Card(object):
 
     constituent_text = ""
