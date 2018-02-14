@@ -56,7 +56,7 @@ def run_game():
 
     for user in range(0, num_users):
         new_hand = []
-        for i in range(0,7):
+        for i in range(0, 7):
             card = red_card_deck.draw_card()
             new_hand.append(card)
         list_of_decks.append(Deck(new_hand))
